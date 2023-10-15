@@ -1,12 +1,13 @@
 <?php
-echo <<<HTML
+echo
+<<<EOF
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ModStudy</title>
-    <link rel="stylesheet" href="styles.css"> <!-- You can link your CSS file here -->
+    <link rel="stylesheet" href="View/css/styles.css" type="text/css"> <!-- You can link your CSS file here -->
 </head>
 <body class="body">
 <header class="page-header">
@@ -14,7 +15,7 @@ echo <<<HTML
 </header>
 <div class="content">
     <div class="top-tabs">
-        <button class="top-tab" style="background: lightblue">To Do</button>
+        <button class="top-tab" onclick="window.location.href='View/taskEditView.html'" style="background: lightblue">To Do</button>
         <button class="top-tab" style="background: deepskyblue; color: #FAF9F6">In Progress</button>
         <button class="top-tab" style="background: lightgreen">Finished</button>
     </div>
@@ -46,4 +47,4 @@ echo <<<HTML
 
 </body>
 </html>
-HTML;
+EOF;

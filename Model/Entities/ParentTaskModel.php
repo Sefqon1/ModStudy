@@ -2,7 +2,6 @@
 
 class ParentTaskModel extends AbstractTaskModel
 {
-
     private int $id;
     private string $name;
     private string $description;
