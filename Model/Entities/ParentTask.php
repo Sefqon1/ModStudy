@@ -1,19 +1,21 @@
 <?php
 
-class ParentTaskModel extends AbstractTaskModel
+class ParentTask extends Entity
 {
     private int $id;
     private string $name;
     private string $description;
+    private $dueDate;
     private bool $isTaskDone;
     private array $childTasks = [];
 
-    public function __construct(int $id, string $name, string $description, bool $isTaskDone)
+    public function __construct(int $id, string $name, string $description, $dueDate)
     {
         $this->id = $id;
         $this->name = $name;
         $this->description = $description;
-        $this->isTaskDone = $isTaskDone;
+        $this->dueDate = $dueDate;
+        $this->isTaskDone = false;
     }
 
     public function getName(): string {
@@ -30,6 +32,14 @@ class ParentTaskModel extends AbstractTaskModel
 
     public function setDescription(string $description): void {
         $this->description = $description;
+    }
+
+    public function getDueDate() {
+        return $this->dueDate;
+    }
+
+    public function setDueDate($dueDate) {
+        $this->dueDate = $dueDate;
     }
 
     public function getIsTaskDone(): bool {

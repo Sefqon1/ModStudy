@@ -1,3 +1,6 @@
+<?php
+echo
+<<<EOF
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,3 +11,4 @@
 <h1>EditView</h1>
 </body>
 </html>
+EOF;

@@ -2,9 +2,9 @@
 
 Interface IRepository
 {
-    public function getAll($connection, $table);
-    public function getById($connection,$table, $id);
-    public function create($connection, $table, $entity);
-    public function update($connection, $table, $id, $entity);
-    public function delete($connection, $table, $id);
+    public function getAll($table);
+    public function getById($table, $id);
+    public function create($table, $entity);
+    public function update($table, $id, $entity);
+    public function delete($table, $id);
 }

@@ -1,6 +1,6 @@
 <?php
 
-class ChildTaskModel extends AbstractTaskModel
+class ChildTask extends Entity
 {
     private int $id;
     private string $name;
@@ -8,12 +8,12 @@ class ChildTaskModel extends AbstractTaskModel
     private bool $isTaskDone;
     private int $parentTaskId;
 
-    public function __construct(int $id, string $name, string $description, bool $isTaskDone, int $parentTaskId)
+    public function __construct(int $id, string $name, string $description, int $parentTaskId)
     {
         $this->id = $id;
         $this->name = $name;
         $this->description = $description;
-        $this->isTaskDone = $isTaskDone;
+        $this->isTaskDone = false;
         $this->parentTaskId = $parentTaskId;
     }
 
