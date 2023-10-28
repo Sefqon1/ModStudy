@@ -1,6 +1,6 @@
 <?php
-require 'Model/Entities/Entity.php';
-class ParentTask extends Entity
+require_once 'Model/Entities/AbstractEntity.php';
+class ParentTask extends AbstractEntity
 {
     private string $description;
     private DateTime $dueDate;
@@ -40,12 +40,14 @@ class ParentTask extends Entity
         $this->isTaskDone = $isTaskDone;
     }
 
-    public function &getChildTasks(): array {
+    public function &getChildTasks() {
         return $this->childTasks;
     }
 
-    public function setChildTask($childTask): void {
-        $this->getChildTasks()[] = $childTask;
+    public function setChildTask($childTasks): void {
+        foreach ($childTasks as $childTask) {
+            $this->getChildTasks()[] = $childTask;
+        }
     }
 
     public function getChildTasksCount(): int {

@@ -1,5 +1,7 @@
 <?php
-require 'Model/Entities/ParentTask.php';
+require_once 'Model/Entities/ParentTask.php';
+require_once 'Model/Entities/ChildTask.php';
+require_once 'ChildTaskRepository.php';
 
 class TaskRepository extends AbstractRepository
 {

@@ -25,8 +25,8 @@ class ChildTaskRepository extends AbstractRepository
             $results = [];
 
             while ($row = $result->fetch_assoc()) {
-                $childTask = new ChildTask($row['name'], $row['description'], $row['isTaskDone'], $row['parentId'] );
-                $results = $childTask;
+                $childTask = new ChildTask($row['id'] ,$row['name'], $row['description'], $row['isTaskDone'], $row['parentId'] );
+                $results[] = $childTask;
             }
 
             $result->free_result();

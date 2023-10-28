@@ -38,7 +38,7 @@ abstract class AbstractRepository implements IRepository
     }
 
 
-    public function getById($table, $id) : Entity
+    public function getById($table, $id) : AbstractEntity
     {
         $this->connection->begin_transaction();
 

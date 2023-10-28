@@ -1,6 +1,6 @@
 <?php
 
-class ChildTask extends Entity
+class ChildTask extends AbstractEntity
 {
     private string $description;
     private bool $isTaskDone;
@@ -9,7 +9,6 @@ class ChildTask extends Entity
     public function __construct(int $id, string $name, string $description, bool $isTaskDone, int $parentTaskId)
     {
         parent::__construct($id, $name);
-        $this->name = $name;
         $this->description = $description;
         $this->isTaskDone = $isTaskDone;
         $this->parentTaskId = $parentTaskId;
