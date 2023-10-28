@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a49adfa0-f235-404a-8d93-9f97d08d9a0b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c5aa04b-edae-4712-92a4-aec0964a56f2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c5aa04b-edae-4712-92a4-aec0964a56f2/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c5aa04b-edae-4712-92a4-aec0964a56f2/storage_v2/_src_/schema/modstudydb.xZ7lcA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c5aa04b-edae-4712-92a4-aec0964a56f2/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c5aa04b-edae-4712-92a4-aec0964a56f2/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8057a62c-b8cc-4746-a537-6e5bd7bb5a91.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8057a62c-b8cc-4746-a537-6e5bd7bb5a91.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/ParentTaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/ParentTaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/ParentTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/ParentTask.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +38,10 @@
       <path value="/srv/http" />
     </include_path>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2XM0eRpMYqFi2auXDDjtkG4KtVc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -42,13 +52,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "dev",
     "last_opened_file_path": "C:/Users/Sefqon1/Documents/GitHub/ModStudy",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "web.server",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php.debug",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -72,6 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698423737438</updated>
       <workItem from="1698423738807" duration="2146000" />
+      <workItem from="1698464679892" duration="2478000" />
     </task>
     <servers />
   </component>

@@ -21,7 +21,7 @@ include('View/Header.php');
             <div class="row">
                 <!-- Progress bar stand-in -->
                 <div class="progress-bar"> Progress Bar</div>
-                <button onclick="window.location.href=\'index.php?page=task&task_id=' . $entity->getId() . '\'">See More</button>
+                <button onclick="window.location.href=\'index.php?page=task/' . $entity->getId() . '\'">See More</button>
             </div>
         </div>';
     }
