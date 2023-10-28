@@ -1,30 +1,20 @@
 <?php
-
+require 'Model/Entities/Entity.php';
 class ParentTask extends Entity
 {
-    private int $id;
-    private string $name;
     private string $description;
-    private $dueDate;
+    private DateTime $dueDate;
     private bool $isTaskDone;
     private array $childTasks = [];
 
-    public function __construct(int $id, string $name, string $description, $dueDate)
+    public function __construct(int $id, string $name, string $description, DateTime $dueDate, bool $isTaskDone)
     {
-        $this->id = $id;
-        $this->name = $name;
+        parent::__construct($id, $name);
         $this->description = $description;
         $this->dueDate = $dueDate;
-        $this->isTaskDone = false;
+        $this->isTaskDone = $isTaskDone;
     }
 
-    public function getName(): string {
-        return $this->name;
-    }
-
-    public function setName(string $name): void {
-        $this->name = $name;
-    }
 
     public function getDescription(): string {
         return $this->description;
@@ -50,7 +40,7 @@ class ParentTask extends Entity
         $this->isTaskDone = $isTaskDone;
     }
 
-    public function getChildTasks(): array {
+    public function &getChildTasks(): array {
         return $this->childTasks;
     }
 

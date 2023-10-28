@@ -62,7 +62,6 @@ abstract class AbstractRepository implements IRepository
         return $entity;
     }
 
-    //TODO: Fix commit() and rollback()
 
     public function create($table, $entity) : bool
     {

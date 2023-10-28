@@ -1,7 +1,5 @@
 <?php
 
-
-
 $page = $_GET['page'] ?? '/';
 
 $routes = [
@@ -19,10 +17,6 @@ if ($page !== '/') {
     $url = $page;
     $id = null;
 }
-
-
-
-
 
 if (array_key_exists($url, $routes)) {
     [$controller, $method] = explode('@', $routes[$url]);

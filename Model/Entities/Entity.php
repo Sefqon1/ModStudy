@@ -1,5 +1,5 @@
 <?php
-require 'Model/Entities/AbstractEntity.php';
+require_once 'Model/Entities/AbstractEntity.php';
 class Entity extends AbstractEntity
 {
     private int $id;

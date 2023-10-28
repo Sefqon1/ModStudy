@@ -10,18 +10,19 @@ include('View/Header.php');
     </div>
 
     <?php
-    foreach ($entities as $entity) {
+    foreach ($tasks as $task) {
+        $formattedDate = $task->getDueDate()->format('Y-m-d');
         echo '
         <div class="task-card">
             <div class="row">
                 <input type="checkbox">
-                <input type="text" value="' . $entity->getName() . '">
-                <input type="date">
+                <input readonly size="35" type="text" value="' . $task->getName() . '">
+                <input readonly type="date" value="'. $formattedDate . '">
             </div>
             <div class="row">
                 <!-- Progress bar stand-in -->
                 <div class="progress-bar"> Progress Bar</div>
-                <button onclick="window.location.href=\'index.php?page=task/' . $entity->getId() . '\'">See More</button>
+                <button onclick="window.location.href=\'index.php?page=task/' . $task->getId() . '\'">See More</button>
             </div>
         </div>';
     }
