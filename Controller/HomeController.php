@@ -15,6 +15,3 @@ class HomeController
         require 'View/Home.php';
     }
 }
-
-$controller = new HomeController();
-$controller->index();
