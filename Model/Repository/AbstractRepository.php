@@ -108,13 +108,15 @@ abstract class AbstractRepository implements IRepository
     public function delete($table, $id) : bool
     {
         $this->connection->begin_transaction();
-
             try {
                 $query = "DELETE FROM {$table} WHERE id = {$id}";
-                return $this->connection->query($query);
+
+                 $this->connection->query($query);
+                 return $this->connection->commit();
             } catch (Exception $e) {
                 die($e->getMessage());
             }
+
     }
 
     private function validateInput($entity): bool

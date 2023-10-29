@@ -6,7 +6,8 @@ $routes = [
     '/' => 'HomeController@index',
     'task' => 'ParentTaskController@index',
     'edit' => 'TaskEditController@index',
-    'create' => 'TaskCreationController@index'
+    'create' => 'TaskCreationController@index',
+    'delete' => 'DeletionController@index'
 ];
 
 if ($page !== '/') {

@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a49adfa0-f235-404a-8d93-9f97d08d9a0b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Controller/DeletionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Entities/AbstractEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Entities/AbstractEntity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Entities/AttachmentFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Entities/AttachmentFile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Entities/ChildTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Entities/ChildTask.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Entities/Entity.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Entities/ParentTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Entities/ParentTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Repository/AbstractRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/AbstractRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Repository/ChildTaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/ChildTaskRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Repository/EntityRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/EntityRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Repository/TaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/TaskRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/ParentTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/ParentTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,27 +44,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/Users/Sefqon1/Documents/GitHub/ModStudy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php.debug",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sefqon1/Documents/GitHub/ModStudy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php.debug&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ModStudy" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="localhost">
       <method v="2" />
@@ -83,6 +80,7 @@
       <updated>1698423737438</updated>
       <workItem from="1698423738807" duration="2146000" />
       <workItem from="1698464679892" duration="13193000" />
+      <workItem from="1698577371104" duration="7373000" />
     </task>
     <servers />
   </component>

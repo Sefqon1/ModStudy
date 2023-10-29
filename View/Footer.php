@@ -2,8 +2,6 @@
 echo
 <<<EOF
 <div class="bottom-tabs">
-    <button class="bottom-tab">Tasks</button>
-    <button class="bottom-tab">Calendar</button>
 </div>
 <!-- Include your PHP logic for repeating elements here -->
 
