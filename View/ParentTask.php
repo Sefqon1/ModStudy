@@ -25,7 +25,7 @@ include('View/Header.php');
                 <input type="checkbox">
                 <input readonly size="35" type="text" value="<?= $childTask->getName() ?>">
                 <hr>
-                <textarea readonly rows="2" cols="25"><?= $task->getDescription() ?></textarea>
+                <textarea readonly rows="2" cols="25"><?= $childTask->getDescription() ?></textarea>
             </div>
             <div class="row">
                 <!-- Progress bar stand-in -->
