@@ -88,15 +88,24 @@ abstract class AbstractRepository implements IRepository
         }
     }
 
-    public function update($table, $id, $entity) : bool
+    public function update($table, $entity) : bool
     {
         $this->connection->begin_transaction();
 
         if ($this->validateInput($entity)) {
 
             try {
-                $query = "UPDATE {$table} SET name = '{$entity->getName()}' WHERE id={entity->getId()}";
-                return $this->connection->query($query);
+                $query = "UPDATE {$table} SET name = '{$entity->getName()}' WHERE id='{$entity->getId()}'";
+                $result =  $this->connection->query($query);
+
+                if ($result) {
+                    $this->connection->commit();
+                } else {
+                    $this->connection->rollback();
+                }
+
+                return $result;
+
             } catch (Exception $e) {
                 die($e->getMessage());
             }

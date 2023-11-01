@@ -5,25 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a49adfa0-f235-404a-8d93-9f97d08d9a0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Controller/ChildTaskCreationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dependencies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8057a62c-b8cc-4746-a537-6e5bd7bb5a91.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8057a62c-b8cc-4746-a537-6e5bd7bb5a91.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8057a62c-b8cc-4746-a537-6e5bd7bb5a91/storage_v2/_src_/schema/modstudy.B3jj2w.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8057a62c-b8cc-4746-a537-6e5bd7bb5a91/storage_v2/_src_/schema/modstudy.B3jj2w.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/DeletionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/DeletionHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/ParentTaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/ParentTaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/TaskCreationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/TaskCreationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Entities/ParentTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Entities/ParentTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/TaskEditController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/TaskEditController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Interfaces/IRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Interfaces/IRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Repository/AbstractRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/AbstractRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Repository/AttachementFileRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/AttachmentFileRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Repository/ChildTaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/ChildTaskRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Repository/EntityRepository.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Repository/TaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/TaskRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/ParentTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/ParentTask.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/TaskCreation.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/TaskCreation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/TaskEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/TaskEdit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,27 +43,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sefqon1/Documents/GitHub/ModStudy&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php.debug&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "C:/Users/Sefqon1/Documents/GitHub/ModStudy",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php.debug",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;,
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="ModStudy" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="localhost">
       <method v="2" />
@@ -98,6 +87,7 @@
       <workItem from="1698718288936" duration="6683000" />
       <workItem from="1698810835297" duration="3980000" />
       <workItem from="1698815513570" duration="3515000" />
+      <workItem from="1698845997706" duration="5055000" />
     </task>
     <servers />
   </component>

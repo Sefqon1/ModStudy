@@ -99,4 +99,37 @@ class TaskRepository extends AbstractRepository
             return false;
         }
     }
+
+    public function update($table, $entity): bool
+    {
+        $this->connection->begin_transaction();
+
+        $id = $entity->getId();
+        $name = $entity->getName();
+        $description = $entity->getDescription();
+        $date = $entity->getDueDate()->format('Y-m-d');
+
+        if ($this->validateInput($entity)) {
+
+            try {
+                $query = "UPDATE {$table} 
+                        SET name = '$name', description = '$description', dueDate = '$date
+'                       WHERE id='$id'";
+                $result =  $this->connection->query($query);
+
+                if ($result) {
+                    $this->connection->commit();
+                } else {
+                    $this->connection->rollback();
+                }
+
+                return $result;
+            } catch (Exception $e) {
+                $this->connection->rollback();
+                die($e->getMessage());
+            }
+        } else {
+            return false;
+        }
+    }
 }

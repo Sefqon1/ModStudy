@@ -1,11 +1,10 @@
 <?php
 include('View/Header.php');
 ?>
-
+<?php
+$formattedDate = $task->getDueDate()->format('Y-m-d');
+?>
 <div class="content"">
-    <?php
-    $formattedDate = $task->getDueDate()->format('Y-m-d');
-    ?>
     <div class="task-info">
         <h1><?= $task->getName() ?></h1>
         <hr>
@@ -56,7 +55,7 @@ include('View/Header.php');
 <?php
 echo '
 <div class="bottom-tabs">
-    <button onclick="" class="bottom-tab" style="background: yellow">Edit</button>
+    <button onclick="window.location.href=\'index.php?page=edit/' . $task->getId() . '\'" class="bottom-tab" style="background: yellow">Edit</button>
     <button onclick="window.location.href=\'index.php?page=delete/' . $task->getId() . '\'" style="background: red; color: white" class="bottom-tab" >Delete</button>
 
 </div>
