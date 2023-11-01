@@ -1,7 +1,6 @@
 <?php
-require_once 'Model/Entities/ParentTask.php';
-require_once 'Model/Entities/ChildTask.php';
-require_once 'ChildTaskRepository.php';
+
+require 'dependencies.php';
 
 class TaskRepository extends AbstractRepository
 {
@@ -68,5 +67,36 @@ class TaskRepository extends AbstractRepository
         $task->setChildTask($childTaskRepository->getAll($task));
 
         return $task;
+    }
+
+    public function createTask($table, $entity): bool
+    {
+        $this->connection->begin_transaction();
+
+        if($this->validateInput($entity)) {
+            $name = $entity->getName();
+            $description = $entity->getDescription();
+            $date = $entity->getDueDate()->format('Y-m-d');
+            $isDone = $entity->getIsTaskDone();
+
+            try {
+                $query = "INSERT INTO {$table} (name, description, dueDate, isTaskDone) 
+                        VALUES ('{$name}', '{$description}', '{$date}', '{$isDone}')";
+                $result = $this->connection->query($query);
+
+                if ($result) {
+                    $this->connection->commit();
+                } else {
+                    $this->connection->rollback();
+                }
+                return $result;
+
+            } catch (Exception $e) {
+                $this->connection->rollback();
+                die($e->getMessage());
+            }
+        } else {
+            return false;
+        }
     }
 }

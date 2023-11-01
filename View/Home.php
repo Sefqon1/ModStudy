@@ -30,5 +30,12 @@ include('View/Header.php');
 </div>
 
 <?php
-include('View/Footer.php');
+echo '
+<div class="bottom-tabs">
+<button onclick="window.location.href=\'index.php?page=create/\'" class="bottom-tab" >Create</button>
+</div>
+</body>
+</html> '
 ?>
+
+

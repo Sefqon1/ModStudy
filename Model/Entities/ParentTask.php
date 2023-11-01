@@ -1,5 +1,7 @@
 <?php
-require_once 'Model/Entities/AbstractEntity.php';
+
+require 'dependencies.php';
+
 class ParentTask extends AbstractEntity
 {
     private string $description;

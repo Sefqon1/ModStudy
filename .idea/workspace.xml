@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a49adfa0-f235-404a-8d93-9f97d08d9a0b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Controller/ChildTaskCreationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dependencies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8057a62c-b8cc-4746-a537-6e5bd7bb5a91.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8057a62c-b8cc-4746-a537-6e5bd7bb5a91.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8057a62c-b8cc-4746-a537-6e5bd7bb5a91/storage_v2/_src_/schema/modstudy.B3jj2w.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8057a62c-b8cc-4746-a537-6e5bd7bb5a91/storage_v2/_src_/schema/modstudy.B3jj2w.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/DeletionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/DeletionHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/ParentTaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/ParentTaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/TaskCreationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/TaskCreationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Entities/ParentTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Entities/ParentTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Repository/AbstractRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/AbstractRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Repository/AttachementFileRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/AttachmentFileRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Repository/ChildTaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/ChildTaskRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Repository/EntityRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Repository/TaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/TaskRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/ParentTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/ParentTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/TaskCreation.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/TaskCreation.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +91,21 @@
       <updated>1698423737438</updated>
       <workItem from="1698423738807" duration="2146000" />
       <workItem from="1698464679892" duration="13193000" />
-      <workItem from="1698577371104" duration="8695000" />
+      <workItem from="1698577371104" duration="9349000" />
+      <workItem from="1698655195446" duration="101000" />
+      <workItem from="1698655356006" duration="716000" />
+      <workItem from="1698656097740" duration="8292000" />
+      <workItem from="1698718288936" duration="6683000" />
+      <workItem from="1698810835297" duration="3980000" />
+      <workItem from="1698815513570" duration="3515000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

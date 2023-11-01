@@ -119,7 +119,7 @@ abstract class AbstractRepository implements IRepository
 
     }
 
-    private function validateInput($entity): bool
+    protected function validateInput($entity): bool
     {
         try {
             $reflection = new ReflectionObject($entity);
