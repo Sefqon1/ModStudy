@@ -26,6 +26,7 @@ $formattedDate = $task->getDueDate()->format('Y-m-d');
                     <hr>
                     <textarea readonly rows="2" cols="25"><?= $childTask->getDescription() ?></textarea>
                 </div>
+                <button onclick="window.location.href='index.php?page=delete/' <?php echo $task->getId() ?>" >Delete</button>
                 <div class="row">
                     <!-- Progress bar stand-in -->
                 </div>
