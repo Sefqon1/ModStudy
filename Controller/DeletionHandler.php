@@ -2,10 +2,9 @@
 require_once 'dependencies.php';
 class DeletionHandler
 {
-    public function index($args) {
+    public function index($connection,$args) {
 
-        $databaseConnection = new DatabaseConnection();
-        $connection = $databaseConnection->getConnection();
+
         $argParts = explode(':', $args);
         $table = $argParts[0];
         $id = $argParts[1];

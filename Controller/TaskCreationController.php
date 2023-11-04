@@ -6,7 +6,7 @@ require 'dependencies.php';
 
 class TaskCreationController
 {
-    public function index() {
+    public function index($connection) {
         $databaseConnection = new DatabaseConnection();
         $connection = $databaseConnection->getConnection();
         $taskRepository = new TaskRepository($connection);

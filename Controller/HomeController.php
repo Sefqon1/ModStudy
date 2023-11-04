@@ -2,10 +2,8 @@
 require_once 'dependencies.php';
 class HomeController
 {
-    public function index(): void
+    public function index($connection): void
     {
-        $databaseConnection = new DatabaseConnection();
-        $connection = $databaseConnection->getConnection();
         $taskRepository = new TaskRepository($connection);
         $tasks = $taskRepository->getAll('parenttask');
         require 'View/Home.php';

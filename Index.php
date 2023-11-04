@@ -1,5 +1,7 @@
 <?php
 
+require 'dependencies.php';
+
 $page = $_GET['page'] ?? '/';
 
 $routes = [
@@ -21,13 +23,15 @@ if ($page !== '/') {
 }
 
 if (array_key_exists($url, $routes)) {
+    $databaseConnection = new DatabaseConnection();
+    $connection = $databaseConnection->getConnection();
     [$controller, $method] = explode('@', $routes[$url]);
     include('./Controller/' . $controller . '.php');
     $controllerInstance = new $controller();
     if ($id) {
-        $controllerInstance->$method($id);
+        $controllerInstance->$method($connection, $id);
     } else {
-        $controllerInstance->$method();
+        $controllerInstance->$method($connection);
     }
 } else {
     echo "404 Not Found :(";

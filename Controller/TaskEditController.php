@@ -2,7 +2,7 @@
 require_once "dependencies.php";
 class TaskEditController
 {
-    public function index($id): void
+    public function index($connection,$id): void
     {
         $databaseConnection = new DatabaseConnection();
         $connection = $databaseConnection->getConnection();
