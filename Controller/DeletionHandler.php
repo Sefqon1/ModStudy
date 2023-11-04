@@ -4,8 +4,6 @@ class DeletionHandler
 {
     public function index($connection,$args)
     {
-
-
         $argParts = explode(':', $args);
         $table = $argParts[0];
         $id = $argParts[1];
@@ -27,8 +25,7 @@ class DeletionHandler
             switch ($table) {
                 case 'childtask':
                     $repository = new ChildTaskRepository($connection);
-                    $childTask = $repository->getById($table, $id);
-                    $parentId = $childTask->getParentTaskId();
+                    $parentId = $repository->getById($table, $id)->getParentTaskId();
                     $repository->delete($table, $id);
                     header("Location: index.php?page=task/" . $parentId);
                     exit();

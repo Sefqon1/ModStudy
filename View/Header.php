@@ -9,9 +9,11 @@ echo
     <title>ModStudy</title>
     <link rel="stylesheet" href="View/css/styles.css" type="text/css">
 </head>
-<body class="body">
-<header class="page-header">
-<button class="bottom-tab" onclick="window.location.href='index.php?page=/'">Home</button>
-    <h1 style="margin-left: auto">ModStudy</h1>
-</header>
+<body>
+    <header class="page-header">
+        <button class="home-button" onclick="window.location.href='index.php?page=/'">Home</button>
+        <h1>ModStudy</h1>
+        <div></div>
+    </header>
+
 EOF;

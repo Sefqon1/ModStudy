@@ -33,9 +33,7 @@ $formattedDate = $task->getDueDate()->format('Y-m-d');
                     <!-- Progress bar stand-in -->
                 </div>
             </div>
-            <?php
-        }
-        ?>
+            <?php } ?>
     <div class="task-card">
         <form action="index.php?page=childtask/<?php echo $task->getId();?>\" method="post">
             <h5>Add new Subtask:</h5>

@@ -2,7 +2,6 @@
 include('View/Header.php');
 ?>
 
-<?php $formattedDate = $task->getDueDate()->format('Y-m-d');?>
 <div class="content">
     <div class="task-info">
         <form action="index.php?page=edit/<?php echo $task->getId();?>" method="post">
@@ -16,18 +15,14 @@ include('View/Header.php');
             </div>
             <div>
                 <label for="dueDate">Due Date:</label>
-                <input type="date" class="form-control" id="dueDate" name="dueDate" value="<?= $formattedDate?>" >
+                <input type="date" class="form-control" id="dueDate" name="dueDate" value="<?= $formattedDate = $task->getDueDate()->format('Y-m-d');?>" >
             </div>
-            <?php
-            echo '
                 <div class="bottom-tabs">
                 <input type="submit" name="submit" value="Update" class="bottom-tab">
-                <button onclick="window.location.href=\'index.php?page=/\'" class="bottom-tab" >Cancel</button>
+                <button onclick="window.location.href='index.php?page=/'" class="bottom-tab" >Cancel</button>
                 </div>
-                '
-            ?>
         </form>
     </div>
 </div>
-</body>s
+</body>
 </html>

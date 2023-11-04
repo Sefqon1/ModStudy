@@ -17,18 +17,13 @@ include('View/Header.php');
                 <label for="dueDate">Due Date:</label>
                 <input type="date" class="form-control" id="dueDate" name="dueDate" required>
                 </div>
-                <?php
-                echo '
                 <div class="bottom-tabs">
                 <input type="submit" name="submit" value="Submit" class="bottom-tab">
-                <button onclick="window.location.href=\'index.php?page=/\'" class="bottom-tab" >Cancel</button>
-                </div>
-                '
-                ?>
+                <button onclick="window.location.href='index.php?page=/'" class="bottom-tab" >Cancel</button>
             </form>
         </div>
     </div>
-    </body>s
+    </body>
 </html>
 
 

@@ -1,33 +1,31 @@
 /* Default styles */
-.body {
+body {
     display: flex;
     flex-direction: column;
-    height: 100vh  ;
+    height: 100vh;
     padding: 0;
     margin: 0;
-    font-family: Arial, sans-serif; /* Added a default font */
-}
-
-.page-container {
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    height: 100vh;
-    border: 2px solid #000;
+    font-family: Roboto, Arial, serif;
 }
 
 .page-header {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: flex-start;
     background: deepskyblue;
     color: black;
-    grid-column: 1;
     position: sticky;
-    top: 0;
-    border: 1px solid #000;
 }
+
+.home-button {
+    color: black;
+    font-weight: bold;
+    background: aqua;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 10px 25px 10px 10px;
+}
+
 
 .content {
     display: flex;

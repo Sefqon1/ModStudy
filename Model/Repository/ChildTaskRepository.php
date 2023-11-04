@@ -38,6 +38,31 @@ class ChildTaskRepository extends AbstractRepository
         }
         return $results;
     }
+
+    public function getById($table, $id) : ChildTask
+    {
+        $this->connection->begin_transaction();
+
+        try {
+            $query = "SELECT * FROM {$table} WHERE id = {$id} ";
+            $result = $this->connection->query($query);
+
+            if ($result === false) {
+                throw new Exception("Query failed:" . $this->connection->error);
+            }
+
+            $row = $result->fetch_assoc();
+            $entity = new ChildTask($row['id'], $row['name'], $row['description'], $row['isTaskDone'], $row['parentId']);
+            $this->connection->commit();
+
+        } catch (Exception $e) {
+            $this->connection->rollback();
+            die($e->getMessage());
+        }
+
+        return $entity;
+    }
+
     public function createTask($table, $entity): bool
     {
         $this->connection->begin_transaction();
