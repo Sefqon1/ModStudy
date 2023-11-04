@@ -4,7 +4,7 @@ include('View/Header.php');
 <?php
 $formattedDate = $task->getDueDate()->format('Y-m-d');
 ?>
-<div class="content"">
+<div class="content">
     <div class="task-info">
         <h1><?= $task->getName() ?></h1>
         <hr>
@@ -26,7 +26,9 @@ $formattedDate = $task->getDueDate()->format('Y-m-d');
                     <hr>
                     <textarea readonly rows="2" cols="25"><?= $childTask->getDescription() ?></textarea>
                 </div>
-                <button onclick="window.location.href='index.php?page=delete/' <?php echo $task->getId() ?>" >Delete</button>
+                <form action="index.php?page=delete/childtask:<?php echo $childTask->getId();?>" method="post">
+                    <input type="submit" name="submit" value="Delete">
+                </form>
                 <div class="row">
                     <!-- Progress bar stand-in -->
                 </div>
@@ -57,7 +59,7 @@ $formattedDate = $task->getDueDate()->format('Y-m-d');
 echo '
 <div class="bottom-tabs">
     <button onclick="window.location.href=\'index.php?page=edit/' . $task->getId() . '\'" class="bottom-tab" style="background: yellow">Edit</button>
-    <button onclick="window.location.href=\'index.php?page=delete/' . $task->getId() . '\'" style="background: red; color: white" class="bottom-tab" >Delete</button>
+    <button onclick="window.location.href=\'index.php?page=delete/parenttask:' . $task->getId() . '\'" style="background: red; color: white" class="bottom-tab" >Delete</button>
 
 </div>
 <!-- Include your PHP logic for repeating elements here -->
