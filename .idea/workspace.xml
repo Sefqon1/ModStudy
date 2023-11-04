@@ -7,7 +7,9 @@
     <list default="true" id="a49adfa0-f235-404a-8d93-9f97d08d9a0b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/ChildTaskCreationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/ChildTaskCreationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/DeletionHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/DeletionHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/ParentTaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/ParentTaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/TaskCreationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/TaskCreationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/TaskEditController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/TaskEditController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +89,7 @@
       <workItem from="1698892915434" duration="1946000" />
       <workItem from="1698989644341" duration="4488000" />
       <workItem from="1699061288641" duration="4570000" />
-      <workItem from="1699082888159" duration="598000" />
+      <workItem from="1699082888159" duration="1111000" />
     </task>
     <servers />
   </component>

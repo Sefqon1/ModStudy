@@ -17,7 +17,9 @@ class ChildTaskCreationController
 
         $taskName = $_POST['taskName'];
         $taskDescription = $_POST['taskDescription'];
+
         $childTask = new ChildTask((int)null, $taskName, $taskDescription, (int)null, $parentId);
+
         if($childTaskRepository->createTask('childtask', $childTask))
         {
             header("Location: index.php?page=task/" . $parentId);
