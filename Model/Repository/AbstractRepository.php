@@ -128,6 +128,30 @@ abstract class AbstractRepository implements IRepository
 
     }
 
+    protected function switchState($table, $id, $newState): bool {
+
+        if ($newState) {
+            $newState = 1;
+        } else {
+            $newState = 0;
+        }
+
+        try {
+            $query = "UPDATE {$table} SET isTaskDone = $newState WHERE id = '$id'";
+            $result = $this->connection->query($query);
+
+            if ($result) {
+                $this->connection->commit();
+            } else {
+                $this->connection->rollback();
+            }
+            return $result;
+        } catch (Exception $e) {
+            $this->connection->rollback();
+            die($e->getMessage());
+        }
+    }
+
     protected function validateInput($entity): bool
     {
         try {

@@ -10,7 +10,8 @@ $routes = [
     'edit' => 'TaskEditController@index',
     'create' => 'TaskCreationController@index',
     'childtask' => 'ChildTaskCreationController@index',
-    'delete' => 'DeletionHandler@index'
+    'delete' => 'DeletionHandler@index',
+    'taskstate' => 'TaskStateController@index'
 ];
 
 if ($page !== '/') {

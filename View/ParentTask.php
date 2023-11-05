@@ -17,11 +17,12 @@ include('View/Header.php');
             <div class="task-info">
                 <div class="row">
                     <?php
-                    if($childTask->getIsTaskDone()) {
-                        echo '<input type="checkbox" checked>';
-                    } else {
-                        echo '<input type="checkbox">';
-                    }
+                    //TODO: This shit lol ->
+                    $checked = $childTask->getIsTaskDone() ? 'checked' : '';
+                    echo "<form method='POST' action='index.php?page=taskstate/'>";
+                    echo "<input type='hidden' name='args' value='childtask:{$childTask->getId()}'>";
+                    echo "<input type='checkbox' name='check' $checked onclick='this.form.submit()'>";
+                    echo "</form>";
                     ?>
                     <input readonly size="35" type="text" value="<?= $childTask->getName() ?>">
                     <hr>
