@@ -1,4 +1,7 @@
 /* Default styles */
+
+/*Navbar Section*/
+
 body {
     display: flex;
     flex-direction: column;
@@ -26,6 +29,26 @@ body {
     margin: 10px 25px 10px 10px;
 }
 
+/*Top Navigation Buttons Section*/
+
+.top-tabs {
+    justify-content: center;
+    align-items: center;
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.top-tab {
+    color: black;
+    font-weight: bold;
+    background: aqua;
+    border-radius: 20px;
+    padding: 20px 30px;
+    margin: 10px 25px 10px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+/*Page Content Section*/
 
 .content {
     display: flex;
@@ -52,26 +75,55 @@ body {
 
 .task-info {
     text-align: left;
+    border: 2px solid lightgray;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(0, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15)
 }
 
-.top-tabs {
+.task-info label {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.task-info {
+    text-align: left;
+    border: 2px solid lightgray;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(0, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15)
+}
+
+.form-control {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    background-color: #f8f8f8;
+}
+
+.form-control-large {
+    height: 100px;
+}
+
+/*Footer Navigation Section*/
+
+.page-footer {
+    background: deepskyblue;
+    grid-column: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-    grid-row: 2;
-    grid-column: 1;
-    border: 2px solid #000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0;
+    height: 4vh;
 }
-
-.top-tab {
-    color: black;
-    font-weight: bold;
-    background: aqua;
-    border-radius: 20px;
-    padding: 20px 30px;
-    margin: 10px 25px 10px 10px;
-
-}
-
 
 .bottom-tabs {
     background: deepskyblue;

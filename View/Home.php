@@ -8,11 +8,11 @@ include('View/Header.php');
             </div>
             <?php
             foreach ($tasks as $task) { ?>
-                <div class="task-card">
+                <div class="task-info">
                     <div class="row">
                         <input type="checkbox">
-                        <input readonly size="35" type="text" value="<?= $task->getName() ?>">
-                        <input readonly type="date" value="<?= $task->getDueDate()->format('Y-m-d') ?>">
+                        <input class="form-control" readonly size="35" type="text" value="<?= $task->getName() ?>" style="font-weight: bolder">
+                        <input class="form-control" readonly type="date" value="<?= $task->getDueDate()->format('Y-m-d') ?>">
                     </div>
                     <div class="row">
                         <!-- Progress bar stand-in -->
@@ -22,9 +22,9 @@ include('View/Header.php');
                 </div>
            <?php } ?>
         </div>
-        <div class="bottom-tabs">
+    <footer class="page-footer">
         <button onclick="window.location.href='index.php?page=create/'" class="bottom-tab" >Create</button>
-        </div>
+    </footer>
     </body>
 </html>
 

@@ -2,19 +2,15 @@
 <project version="4">
   <component name="AnalysisUIOptions">
     <option name="ANALYZE_INJECTED_CODE" value="false" />
+    <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a49adfa0-f235-404a-8d93-9f97d08d9a0b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/TaskStateController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/DeletionHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/DeletionHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/ParentTaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/ParentTaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Repository/ChildTaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/ChildTaskRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/ParentTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/ParentTask.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/TaskCreation.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/TaskCreation.php" afterDir="false" />
@@ -63,8 +59,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php.debug",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -101,6 +97,7 @@
       <workItem from="1698989644341" duration="4488000" />
       <workItem from="1699061288641" duration="4570000" />
       <workItem from="1699082888159" duration="12081000" />
+      <workItem from="1699153405896" duration="10632000" />
     </task>
     <servers />
   </component>
