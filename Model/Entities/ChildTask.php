@@ -1,32 +1,19 @@
 <?php
 
-class ChildTask extends Entity
+class ChildTask extends AbstractEntity
 {
-    private int $id;
-    private string $name;
     private string $description;
     private bool $isTaskDone;
     private int $parentTaskId;
 
-    public function __construct(int $id, string $name, string $description, int $parentTaskId)
+    public function __construct(int $id, string $name, string $description, bool $isTaskDone, int $parentTaskId)
     {
-        $this->id = $id;
-        $this->name = $name;
+        parent::__construct($id, $name);
         $this->description = $description;
-        $this->isTaskDone = false;
+        $this->isTaskDone = $isTaskDone;
         $this->parentTaskId = $parentTaskId;
     }
 
-
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
 
     public function getDescription(): string
     {

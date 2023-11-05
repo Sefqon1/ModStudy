@@ -38,7 +38,7 @@ abstract class AbstractRepository implements IRepository
     }
 
 
-    public function getById($table, $id) : Entity
+    public function getById($table, $id) : AbstractEntity
     {
         $this->connection->begin_transaction();
 
@@ -62,7 +62,6 @@ abstract class AbstractRepository implements IRepository
         return $entity;
     }
 
-    //TODO: Fix commit() and rollback()
 
     public function create($table, $entity) : bool
     {
@@ -89,15 +88,24 @@ abstract class AbstractRepository implements IRepository
         }
     }
 
-    public function update($table, $id, $entity) : bool
+    public function update($table, $entity) : bool
     {
         $this->connection->begin_transaction();
 
         if ($this->validateInput($entity)) {
 
             try {
-                $query = "UPDATE {$table} SET name = '{$entity->getName()}' WHERE id={entity->getId()}";
-                return $this->connection->query($query);
+                $query = "UPDATE {$table} SET name = '{$entity->getName()}' WHERE id='{$entity->getId()}'";
+                $result =  $this->connection->query($query);
+
+                if ($result) {
+                    $this->connection->commit();
+                } else {
+                    $this->connection->rollback();
+                }
+
+                return $result;
+
             } catch (Exception $e) {
                 die($e->getMessage());
             }
@@ -109,16 +117,18 @@ abstract class AbstractRepository implements IRepository
     public function delete($table, $id) : bool
     {
         $this->connection->begin_transaction();
-
             try {
                 $query = "DELETE FROM {$table} WHERE id = {$id}";
-                return $this->connection->query($query);
+
+                 $this->connection->query($query);
+                 return $this->connection->commit();
             } catch (Exception $e) {
                 die($e->getMessage());
             }
+
     }
 
-    private function validateInput($entity): bool
+    protected function validateInput($entity): bool
     {
         try {
             $reflection = new ReflectionObject($entity);

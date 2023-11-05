@@ -1,6 +1,6 @@
 <?php
 
-class AttachmentFile extends Entity
+class AttachmentFile extends AbstractEntity
 {
     private int $id;
     private string $name;
