@@ -6,7 +6,6 @@ class TaskStateController
         $argParts = explode(':', $args);
         $table = $argParts[0];
         $id = $argParts[1];
-
         if (isset($_POST['check'])) {
             switch ($table) {
                 case 'childtask':
