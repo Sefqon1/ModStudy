@@ -128,6 +128,7 @@ abstract class AbstractRepository implements IRepository
 
     }
 
+
     public function updateState($table, $id): bool
     {
         $this->connection->begin_transaction();

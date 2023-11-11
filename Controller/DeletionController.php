@@ -7,7 +7,6 @@ class DeletionController
         $argParts = explode(':', $args);
         $table = $argParts[0];
         $id = $argParts[1];
-        echo $id;
 
         if (isset($_POST['confirm'])) {
            $this->deleteTask($connection, $table, $id);
@@ -25,14 +24,12 @@ class DeletionController
             switch ($table) {
                 case 'childtask':
                     $repository = new ChildTaskRepository($connection);
-                    echo $id;
                     $parentId = $repository->getById($table, $id)->getParentTaskId();
                     $repository->delete($table, $id);
                     header("Location: index.php?page=task/" . $parentId);
                     exit();
                 case 'parenttask':
                     $repository = new TaskRepository($connection);
-                    echo $id;
                     $repository->delete($table, $id);
                     header('Location: index.php?page=/');
                     exit();

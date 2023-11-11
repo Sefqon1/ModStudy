@@ -3,8 +3,8 @@ include('View/Header.php');
 ?>
 <div class="content">
     <div class="top-tabs">
-        <button class="top-tab" onclick="window.location.href='index.php?page=task'" style="background: deepskyblue; color: #FAF9F6">In Progress</button>
-        <button class="top-tab" style="background: lightgreen">Finished</button>
+        <button class="top-tab progress active" onclick="window.location.href='index.php?page=/'">In Progress</button>
+        <button class="top-tab finished" onclick="window.location.href='index.php?page=finished'">Finished</button>
     </div>
     <?php
     foreach ($tasks as $task) { ?>

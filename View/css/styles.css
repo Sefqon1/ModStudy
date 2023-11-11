@@ -45,6 +45,27 @@ a, a:visited, a:hover, a:active {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
+.top-tab.progress {
+    background: deepskyblue;
+    color: #FAF9F6;
+}
+
+.top-tab.progress.active {
+    border-color: #FAF9F6;
+    box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.7);
+}
+
+.top-tab.finished {
+    background: lightgreen;
+}
+
+.top-tab.finished.active {
+    border-color: #FAF9F6;
+    box-shadow: 0px 0px 10px rgba(0, 128, 0, 0.7);
+}
+
+
+
 /*Page Content Section*/
 
 .content {
@@ -105,7 +126,6 @@ a, a:visited, a:hover, a:active {
 .form-control-large {
     height: 100px;
 }
-
 .progress-bar {
     width: 30vw;
     height: 20px;

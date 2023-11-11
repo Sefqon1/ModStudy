@@ -13,6 +13,23 @@ class HomeController
             }
         }
 
+        $tasks =$this->sortByDate($tasks);
+
+
+
         require 'View/Home.php';
     }
+
+    public function sortByDate($tasks) : Array {
+        $ord = array();
+        foreach ($tasks as $task) {
+            $ord[] = $task->getDueDate();
+        }
+
+        array_multisort($ord, SORT_ASC, $tasks);
+
+        return $tasks;
+    }
+
+
 }

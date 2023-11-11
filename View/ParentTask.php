@@ -44,9 +44,6 @@ include('View/Header.php');
                 <form action="index.php?page=delete/childtask:<?php echo $childTask->getId();?>" method="post">
                     <input type="submit" name="submit" value="Delete">
                 </form>
-                <div class="row">
-                    <!-- Progress bar stand-in -->
-                </div>
             </div>
             <?php } ?>
     <div class="task-info">

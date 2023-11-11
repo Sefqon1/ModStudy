@@ -6,6 +6,7 @@ $page = $_GET['page'] ?? '/';
 
 $routes = [
     '/' => 'HomeController@index',
+    'finished' => 'HomeFinishedController@index',
     'task' => 'ParentTaskController@index',
     'edit' => 'TaskEditController@index',
     'create' => 'TaskCreationController@index',

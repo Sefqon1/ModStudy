@@ -9,19 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a49adfa0-f235-404a-8d93-9f97d08d9a0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/js/ProgressBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8057a62c-b8cc-4746-a537-6e5bd7bb5a91.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8057a62c-b8cc-4746-a537-6e5bd7bb5a91.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/HomeFinished.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/DeletionHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/DeletionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/DeletionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/DeletionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/TaskStateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/TaskStateController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Entities/ParentTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Entities/ParentTask.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Repository/AbstractRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/AbstractRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Repository/ChildTaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/ChildTaskRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Repository/TaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Repository/TaskRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/ParentTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/ParentTask.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/css/styles.css" afterDir="false" />
@@ -54,6 +48,9 @@
       <path value="/srv/http" />
     </include_path>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -63,30 +60,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sefqon1/Documents/GitHub/ModStudy&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Sefqon1/Documents/GitHub/ModStudy",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;,
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
+  <component name="QodanaHighlightedReportService">
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="C:\Users\Sefqon1\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
+        <option name="reportGuid" value="c9a97d89-8f81-4657-80b3-155bd42f9e39" />
+        <option name="reportName" value="ModStudy/qodana/2023-11-11" />
+      </LocalReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\Sefqon1\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="c9a97d89-8f81-4657-80b3-155bd42f9e39" reportId="ModStudy/qodana/2023-11-11" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="ModStudy" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="localhost">
       <method v="2" />
@@ -120,6 +134,8 @@
       <workItem from="1699609467282" duration="2174000" />
       <workItem from="1699624737128" duration="2364000" />
       <workItem from="1699629670760" duration="1151000" />
+      <workItem from="1699678150869" duration="7025000" />
+      <workItem from="1699704785946" duration="2284000" />
     </task>
     <servers />
   </component>
