@@ -11,8 +11,7 @@ echo
 </head>
 <body>
     <header class="page-header">
-        <button class="home-button" onclick="window.location.href='index.php?page=/'">Home</button>
-        <h1>ModStudy</h1>
+        <a href="index.php?page=/"><h1>ModStudy</h1></a>
         <div></div>
     </header>
 

@@ -5,7 +5,14 @@ class HomeController
     public function index($connection): void
     {
         $taskRepository = new TaskRepository($connection);
-        $tasks = $taskRepository->getAll('parenttask');
+        $initialTasks = $taskRepository->getAll('parenttask');
+        $tasks = [];
+        foreach ($initialTasks as $task) {
+            if (!$task->getIsTaskDone()) {
+                $tasks[] = $task;
+            }
+        }
+
         require 'View/Home.php';
     }
 }

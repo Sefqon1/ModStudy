@@ -13,20 +13,17 @@ body {
 
 .page-header {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr;
     align-items: center;
     background: deepskyblue;
     color: black;
     position: sticky;
 }
 
-.home-button {
-    color: black;
-    font-weight: bold;
-    background: aqua;
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin: 10px 25px 10px 10px;
+a, a:visited, a:hover, a:active {
+    margin-left: 10px;
+    text-decoration: none;
+    color: inherit;
 }
 
 /*Top Navigation Buttons Section*/
@@ -107,6 +104,24 @@ body {
 
 .form-control-large {
     height: 100px;
+}
+
+.progress-bar {
+    width: 30vw;
+    height: 20px;
+    background-color: #ddd;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 2px;
+}
+.progress-fill {
+    width: 60%;
+    height: 16px;
+    background-color: #00bfff;
+    text-align: center;
+    line-height: 16px;
+    color: white;
 }
 
 /*Footer Navigation Section*/

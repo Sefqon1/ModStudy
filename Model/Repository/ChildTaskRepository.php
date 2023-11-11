@@ -94,21 +94,4 @@ class ChildTaskRepository extends AbstractRepository
         }
     }
 
-    public function updateState($table, $id): bool
-    {
-        $this->connection->begin_transaction();
-        $task = $this->getById($table, $id);
-        $newState = false;
-
-        if (!$task->getIsTaskDone()) {
-            $newState = true;
-            $this->switchState($table, $id, $newState);
-            return $newState;
-        } else if ($task->getIsTaskDone()) {
-            $this->switchState($table, $id, $newState);
-            return !$newState;
-        }
-        return $newState;
-    }
-
 }

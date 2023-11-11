@@ -24,9 +24,12 @@ class TaskRepository extends AbstractRepository
             }
             $results = [];
 
+            $childTaskRepository = new ChildTaskRepository($this->connection);
+
             while ($row = $result->fetch_assoc()) {
                 $dueDate = new DateTime($row['dueDate']);
                 $task = new ParentTask($row['id'], $row['name'], $row['description'], $dueDate, $row['isTaskDone']);
+                $task->setChildTask($childTaskRepository->getAll($task));
                 $results[] = $task;
             }
 
@@ -40,6 +43,7 @@ class TaskRepository extends AbstractRepository
 
         return $results;
     }
+
 
     public function getById($table, $id): ParentTask
     {
@@ -132,4 +136,5 @@ class TaskRepository extends AbstractRepository
             return false;
         }
     }
+
 }

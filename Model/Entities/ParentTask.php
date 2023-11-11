@@ -55,6 +55,14 @@ class ParentTask extends AbstractEntity
     public function getChildTasksCount(): int {
         return count($this->getChildTasks());
     }
-
+    public function getDoneChildTasksCount(): int {
+        $counter = 0;
+        foreach ($this->childTasks as $childTask) {
+            if ($childTask->getIsTaskDone()) {
+                $counter++;
+            }
+        }
+        return $counter;
+    }
 
 }
