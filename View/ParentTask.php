@@ -22,7 +22,7 @@ include('View/Header.php');
             <div id="progress-fill" class="progress-fill">0%</div>
         </div>
     </div>
-        <h3>Subtasks:</h3>
+        <h3><?= $task->getChildTasksCount() ?> Subtasks:</h3>
         <?php
         foreach ($task->getChildTasks() as $childTask) {
             ?>

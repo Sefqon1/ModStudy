@@ -133,41 +133,33 @@ abstract class AbstractRepository implements IRepository
     {
         $this->connection->begin_transaction();
         $task = $this->getById($table, $id);
-        $newState = false;
+        $newState = !$task->getIsTaskDone();
 
-        if (!$task->getIsTaskDone()) {
-            $newState = true;
+        $this->connection->begin_transaction();
+        try {
             $this->switchState($table, $id, $newState);
-            return $newState;
-        } else if ($task->getIsTaskDone()) {
-            $this->switchState($table, $id, $newState);
-            return !$newState;
+            $this->connection->commit();
+        } catch (Exception $e) {
+            $this->connection->rollback();
+            throw $e;
         }
+
         return $newState;
     }
 
     protected function switchState($table, $id, $newState): bool {
 
-        if ($newState) {
-            $newState = 1;
-        } else {
-            $newState = 0;
+        $newState = $newState ? 1 : 0;
+
+        $stmt = $this->connection->prepare("UPDATE {$table} SET isTaskDone = ? WHERE id = ?");
+        $stmt->bind_param('is', $newState, $id);
+        $result = $stmt->execute();
+
+        if (!$result) {
+            throw new Exception('Failed to update state');
         }
 
-        try {
-            $query = "UPDATE {$table} SET isTaskDone = $newState WHERE id = '$id'";
-            $result = $this->connection->query($query);
-
-            if ($result) {
-                $this->connection->commit();
-            } else {
-                $this->connection->rollback();
-            }
-            return $result;
-        } catch (Exception $e) {
-            $this->connection->rollback();
-            die($e->getMessage());
-        }
+        return $result;
     }
 
     protected function validateInput($entity): bool

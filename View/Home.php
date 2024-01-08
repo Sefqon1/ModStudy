@@ -14,10 +14,6 @@ include('View/Header.php');
                 $checked = $task->getIsTaskDone() ? 'checked' : '';
                 $disabled = $task->getIsTaskDone() ? 'disabled' : '';
                 $taskId = $task->getId();
-                echo "<form method='POST' action='index.php?page=taskstate/parenttask:$taskId'>";
-                echo "<input type='hidden' name='check' value='0'>";
-                echo "<input type='checkbox' name='check' value='1' $checked $disabled onclick='this.form.submit()'>";
-                echo "</form>";
                 ?>
                 <input class="form-control" readonly size="35" type="text" value="<?= $task->getName() ?>" style="font-weight: bolder">
                 <input class="form-control" readonly type="date" value="<?= $task->getDueDate()->format('Y-m-d') ?>">

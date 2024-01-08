@@ -126,6 +126,9 @@ a, a:visited, a:hover, a:active {
 .form-control-large {
     height: 100px;
 }
+
+/*Progress Bar Section*/
+
 .progress-bar {
     width: 30vw;
     height: 20px;
@@ -140,6 +143,7 @@ a, a:visited, a:hover, a:active {
     height: 16px;
     background-color: #00bfff;
     text-align: center;
+    border-radius: 10px;
     line-height: 16px;
     color: white;
 }
