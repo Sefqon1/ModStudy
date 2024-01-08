@@ -105,6 +105,15 @@ body {
     margin: 0;
     height: 4vh;
 }
+.progress-fill {
+    width: 60%;
+    height: 16px;
+    background-color: #00bfff;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 16px;
+    color: white;
+}
 
 .bottom-tabs {
     background: deepskyblue;
