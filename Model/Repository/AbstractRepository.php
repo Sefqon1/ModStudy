@@ -128,6 +128,40 @@ abstract class AbstractRepository implements IRepository
 
     }
 
+
+    public function updateState($table, $id): bool
+    {
+        $this->connection->begin_transaction();
+        $task = $this->getById($table, $id);
+        $newState = !$task->getIsTaskDone();
+
+        $this->connection->begin_transaction();
+        try {
+            $this->switchState($table, $id, $newState);
+            $this->connection->commit();
+        } catch (Exception $e) {
+            $this->connection->rollback();
+            throw $e;
+        }
+
+        return $newState;
+    }
+
+    protected function switchState($table, $id, $newState): bool {
+
+        $newState = $newState ? 1 : 0;
+
+        $stmt = $this->connection->prepare("UPDATE {$table} SET isTaskDone = ? WHERE id = ?");
+        $stmt->bind_param('is', $newState, $id);
+        $result = $stmt->execute();
+
+        if (!$result) {
+            throw new Exception('Failed to update state');
+        }
+
+        return $result;
+    }
+
     protected function validateInput($entity): bool
     {
         try {

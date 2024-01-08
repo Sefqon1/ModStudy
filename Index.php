@@ -4,13 +4,17 @@ require 'dependencies.php';
 
 $page = $_GET['page'] ?? '/';
 
+$page = $_GET['page'] ?? '/';
+
 $routes = [
     '/' => 'HomeController@index',
+    'finished' => 'HomeFinishedController@index',
     'task' => 'ParentTaskController@index',
     'edit' => 'TaskEditController@index',
     'create' => 'TaskCreationController@index',
     'childtask' => 'ChildTaskCreationController@index',
-    'delete' => 'DeletionHandler@index'
+    'delete' => 'DeletionController@index',
+    'taskstate' => 'TaskStateController@index'
 ];
 
 if ($page !== '/') {
@@ -22,6 +26,10 @@ if ($page !== '/') {
     $id = null;
 }
 
+
+
+
+
 if (array_key_exists($url, $routes)) {
     $databaseConnection = new DatabaseConnection();
     $connection = $databaseConnection->getConnection();
@@ -29,9 +37,9 @@ if (array_key_exists($url, $routes)) {
     include('./Controller/' . $controller . '.php');
     $controllerInstance = new $controller();
     if ($id) {
-        $controllerInstance->$method($connection, $id);
+        $controllerInstance->$method($id);
     } else {
-        $controllerInstance->$method($connection);
+        $controllerInstance->$method();
     }
 } else {
     echo "404 Not Found :(";

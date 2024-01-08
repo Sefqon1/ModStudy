@@ -25,7 +25,7 @@ class ChildTaskRepository extends AbstractRepository
             $results = [];
 
             while ($row = $result->fetch_assoc()) {
-                $childTask = new ChildTask($row['id'] ,$row['name'], $row['description'], $row['isTaskDone'], $row['parentId'] );
+                $childTask = new ChildTask($row['id'], $row['name'], $row['description'], $row['isTaskDone'], $row['parentId']);
                 $results[] = $childTask;
             }
 
@@ -39,7 +39,7 @@ class ChildTaskRepository extends AbstractRepository
         return $results;
     }
 
-    public function getById($table, $id) : ChildTask
+    public function getById($table, $id): ChildTask
     {
         $this->connection->begin_transaction();
 
@@ -67,7 +67,7 @@ class ChildTaskRepository extends AbstractRepository
     {
         $this->connection->begin_transaction();
 
-        if($this->validateInput($entity)) {
+        if ($this->validateInput($entity)) {
             $name = $entity->getName();
             $description = $entity->getDescription();
             $isDone = $entity->getIsTaskDone();
@@ -93,6 +93,5 @@ class ChildTaskRepository extends AbstractRepository
             return false;
         }
     }
-
 
 }

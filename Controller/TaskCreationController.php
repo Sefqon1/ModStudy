@@ -1,19 +1,14 @@
 <?php
 
 require 'dependencies.php';
-
-
-
 class TaskCreationController
 {
     public function index($connection) {
-
         if (isset($_POST['submit'])) {
             $this->createTask($connection);
         }
         require 'View/TaskCreation.php';
      }
-
      public function createTask($connection) {
          $taskRepository = new TaskRepository($connection);
          $taskName = $_POST['taskName'];

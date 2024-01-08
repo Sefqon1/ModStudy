@@ -5,23 +5,37 @@ include('View/Header.php');
 <div class="content">
     <div class="task-info">
         <h2><?= $task->getName() ?></h2>
+        <?php
+        $checked = $task->getIsTaskDone() ? 'checked' : '';
+        $disabled = $task->getIsTaskDone() ? 'disabled' : '';
+        $taskId = $task->getId();
+        echo "<form method='POST' action='index.php?page=taskstate/parenttask:$taskId'>";
+        echo "<input type='hidden' name='check' value='0'>";
+        echo "<input type='checkbox' name='check' value='1' $checked $disabled onclick='this.form.submit()'>";
+        echo "</form>";
+        ?>
         <hr>
         <p><strong>Due on:</strong> <input readonly class="form-control" type="date" value="<?= $task->getDueDate()->format('Y-m-d'); ?>"></p>
         <p><strong>Description:</strong> <textarea readonly class="form-control" rows='4' cols='50'><?= $task->getDescription() ?></textarea></p>
         <hr>
+        <div id="progress-bar" class="progress-bar">
+            <div id="progress-fill" class="progress-fill">0%</div>
+        </div>
     </div>
-        <h3>Subtasks:</h3>
+        <h3><?= $task->getChildTasksCount() ?> Subtasks:</h3>
         <?php
         foreach ($task->getChildTasks() as $childTask) {
             ?>
             <div class="task-info">
                 <div class="row">
                     <?php
-                    if($childTask->getIsTaskDone()) {
-                        echo '<input type="checkbox" checked>';
-                    } else {
-                        echo '<input type="checkbox">';
-                    }
+                    $checked = $childTask->getIsTaskDone() ? 'checked' : '';
+                    $childTaskId = $childTask->getId();
+                    echo "<form method='POST' action='index.php?page=taskstate/childtask:$childTaskId'>";
+                    echo "<input type='hidden' name='check' value='0'>";
+                    echo "<input type='checkbox' name='check' value='1' $checked onclick='this.form.submit()'>";
+                    echo "</form>";
+
                     ?>
                     <input readonly size="35" type="text" value="<?= $childTask->getName() ?>">
                     <hr>
@@ -30,9 +44,6 @@ include('View/Header.php');
                 <form action="index.php?page=delete/childtask:<?php echo $childTask->getId();?>" method="post">
                     <input type="submit" name="submit" value="Delete">
                 </form>
-                <div class="row">
-                    <!-- Progress bar stand-in -->
-                </div>
             </div>
             <?php } ?>
     <div class="task-info">
@@ -53,9 +64,25 @@ include('View/Header.php');
     </div>
 </div>
 
+
     <footer class="page-footer">
             <button onclick="window.location.href='index.php?page=edit/<?php echo $task->getId();?>'" class="bottom-tab" style="background: yellow">Edit</button>
             <button onclick="window.location.href='index.php?page=delete/parenttask:<?php echo $task->getId();?>'" style="background: red; color: white" class="bottom-tab" >Delete</button>
     </footer>
     </body>
-</html>
+    <script>
+        var total = <?php echo $task->getChildTasksCount() ?>;
+        var done = <?php echo $task->getDoneChildTasksCount() ?>;
+        var percentage;
+        if (total === 0) {
+            percentage = 0;
+        } else {
+            percentage = Math.round((done / total) * 100);
+        }
+        var progressFill = document.getElementById("progress-fill");
+        progressFill.style.width = percentage + "%";
+        progressFill.innerHTML = percentage + "%";
+
+    </script>
+
+    </html>
